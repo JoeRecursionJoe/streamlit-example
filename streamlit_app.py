@@ -18,7 +18,7 @@ dataset_url = "https://raw.githubusercontent.com/Lexie88rus/bank-marketing-analy
 
 
 """
-# Welcome to Streamlit!
+# Precision Resource PRKY Dashboard
 
 Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:.
 If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
@@ -35,14 +35,14 @@ def get_data() -> pd.DataFrame:
 
 
 # read csv from a github repo
-dataset_url = "https://raw.githubusercontent.com/Lexie88rus/bank-marketing-analysis/master/bank.csv"
+# dataset_url = "https://raw.githubusercontent.com/Lexie88rus/bank-marketing-analysis/master/bank.csv"
+dataset_url = "./bank.csv"
 
 # read csv from a URL@st.experimental_memodef get_data() -> pd.DataFrame:return pd.read_csv(dataset_url)
-
 df = get_data()
 
 # dashboard title
-st.title("Real-Time / Live Data Science Dashboard")
+st.title("Real-Time joe / Live Data Science Dashboard")
 
 # top-level filters
 job_filter = st.selectbox("Select the Job", pd.unique(df["job"]))
