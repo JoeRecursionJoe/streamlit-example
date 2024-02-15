@@ -8,6 +8,12 @@ import pandas as pd  # read csv, df manipulation
 import plotly.express as px  # interactive charts
 import streamlit as st  # 🎈 data web app development
 
+st.set_page_config(
+   page_title="Real-Time Data Science Dashboard",
+   page_icon="✅",
+   layout="wide",)
+
+
 dataset_url = "https://raw.githubusercontent.com/Lexie88rus/bank-marketing-analysis/master/bank.csv"
 
 
@@ -20,15 +26,13 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
+
+
 # read csv from a URL
-@st.experimental_memo
+@st.cache_data
 def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset_url)
 
-st.set_page_config(
-   page_title="Real-Time Data Science Dashboard",
-   page_icon="✅",
-   layout="wide",)
 
 # read csv from a github repo
 dataset_url = "https://raw.githubusercontent.com/Lexie88rus/bank-marketing-analysis/master/bank.csv"
